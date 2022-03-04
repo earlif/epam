@@ -6,12 +6,12 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package'
             }
         }
-//         stage('test') {
-//             steps {
-//                 echo "test stage"
-//                 sh 'java -version'
-//             }
-//         }
+        stage('test') {
+            steps {
+                echo "test stage"
+                sh 'java -version'
+            }
+        }
 //         stage('deploy') {
 //             agent { label "jdk8"}
 //             steps {
