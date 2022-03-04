@@ -1,3 +1,5 @@
+package com.epam.liegou;
+
 public class LieGou {
 
     public static void main(String[] args){
