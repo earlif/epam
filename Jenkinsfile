@@ -1,15 +1,16 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
-            steps {
-                sh 'mvn -B -DskipTests clean package'
-            }
-        }
         stage('test') {
             steps {
-                echo "test stage"
+                sh 'mvn test -DtestngXmlFile=src/main/resources/mobile_android.xml'
+            }
+        }
+        stage('post test') {
+            steps {
+                echo "post test"
                 sh 'java -version'
+                sh 'mvn -version'
             }
         }
 //         stage('deploy') {
