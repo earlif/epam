@@ -1,11 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('test') {
-            steps {
-                sh 'mvn test -DtestngXmlFile=src/main/resources/mobile_android.xml'
-            }
-        }
+//         stage('test') {
+//             steps {
+//                 sh 'mvn test -DtestngXmlFile=src/main/resources/mobile_android.xml'
+//             }
+//         }
         stage('post test') {
             steps {
                 echo "post test"
