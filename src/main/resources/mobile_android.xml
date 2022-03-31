@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright © 2022 EPAM Systems, Inc. All Rights Reserved. All information contained herein is, and remains the
+  ~ property of EPAM Systems, Inc. and/or its suppliers and is protected by international intellectual
+  ~ property law. Dissemination of this information or reproduction of this material is strictly forbidden,
+  ~ unless prior written permission is obtained from EPAM Systems, Inc
+  -->
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="epam" parallel="none">
+    <!--        <listeners>-->
+    <!--            <listener class-name="com.welab.automation.base.listener.RetryListener"></listener>-->
+    <!--            <listener class-name="com.welab.automation.base.reportportal.testng.ReportPortalTestNGListener" />-->
+    <!--        </listeners>-->
+
+    <test verbose="2" preserve-order="true" name="demo">
+        <classes>
+            <class name="com.epam.liegou.projects.demo.runners.DemoTestRunner">
+                <methods>
+                    <include name="runScenario"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
